@@ -1,5 +1,5 @@
 import unittest
-import calc
+from calc_testing import calc
 
 
 class TestCalc(unittest.TestCase):
@@ -22,7 +22,7 @@ class TestCalc(unittest.TestCase):
     def test_divide(self):
         self.assertEqual(calc.divide(10, 5), 2)
         self.assertEqual(calc.divide(-1, 1), -1)
-        self.assertEqual(calc.divide(-5, -10), 1/2)
+        self.assertEqual(calc.divide(-5, -10), 1 / 2)
 
         with self.assertRaises(ValueError):
             calc.divide(10, 0)
